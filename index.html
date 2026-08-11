@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currículo de Uíza de Carvalho Silva — Analista de Testes | QA">
+  <meta name="author" content="Uíza de Carvalho Silva">
+  <title>Uíza de Carvalho Silva | Analista de Testes | QA</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #18212b;
+      --muted: #687381;
+      --line: #e4e8ed;
+      --accent: #5b4b8a;
+      --accent-soft: #eeeaf7;
+      --dark: #171b22;
+      --max: 1120px;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(91,75,138,.14), transparent 28%),
+        radial-gradient(circle at 10% 85%, rgba(91,75,138,.08), transparent 25%),
+        var(--bg);
+    }
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      border-bottom: 1px solid rgba(228,232,237,.75);
+      background: rgba(247,248,250,.82);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 70px;
+      align-items: center;
+      padding-top: 72px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6.4rem);
+      line-height: .95;
+      letter-spacing: -.065em;
+      margin: 0 0 22px;
+      max-width: 900px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      font-weight: 600;
+      color: var(--muted);
+      margin: 0 0 26px;
+    }
+
+    .hero p { max-width: 680px; color: var(--muted); font-size: 1.06rem; }
+
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      font-weight: 700;
+      background: var(--surface);
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .button:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .button.primary { background: var(--dark); color: white; border-color: var(--dark); }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 20px 60px rgba(23,27,34,.08);
+    }
+
+    .hero-card .number {
+      font-size: 4.5rem;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -.06em;
+      color: var(--accent);
+    }
+
+    .hero-card p { margin: 10px 0 0; }
+
+    section { padding: 110px 0; }
+    section:nth-of-type(even) { background: var(--surface); }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: .38fr 1fr;
+      gap: 40px;
+      margin-bottom: 52px;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .76rem;
+    }
+
+    h2.section-title {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+    }
+
+    .summary {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 850px;
+    }
+
+    .grid { display: grid; gap: 20px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    section:nth-of-type(even) .card { background: var(--bg); }
+
+    .card h3 { margin: 0 0 7px; font-size: 1.2rem; }
+    .meta { color: var(--muted); font-size: .92rem; margin-bottom: 18px; }
+    .card ul { margin: 0; padding-left: 20px; color: var(--muted); }
+    .card li + li { margin-top: 7px; }
+
+    .experience {
+      position: relative;
+      border-left: 2px solid var(--line);
+      padding-left: 28px;
+    }
+
+    .job {
+      position: relative;
+      padding-bottom: 42px;
+    }
+
+    .job:last-child { padding-bottom: 0; }
+
+    .job::before {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--accent);
+      left: -35px;
+      top: 8px;
+      box-shadow: 0 0 0 6px var(--bg);
+    }
+
+    section:nth-of-type(even) .job::before { box-shadow: 0 0 0 6px var(--surface); }
+
+    .job h3 { margin-bottom: 3px; font-size: 1.3rem; }
+    .role { font-weight: 700; }
+    .job ul { color: var(--muted); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .education-item {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .education-item:first-child { padding-top: 0; }
+    .education-item:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    .contact {
+      background: var(--dark);
+      color: white;
+    }
+
+    .contact .section-kicker { color: #c9bff0; }
+    .contact .summary { color: #bac2cc; }
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .contact-link {
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 16px;
+      text-decoration: none;
+      background: rgba(255,255,255,.04);
+    }
+
+    .contact-link small { display: block; color: #aeb6c1; margin-bottom: 5px; }
+    footer { padding: 28px 0; background: #101319; color: #8e97a4; font-size: .9rem; }
+
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+      .hero, .section-head, .grid.two, .contact-card { grid-template-columns: 1fr; }
+      .hero { gap: 40px; padding-top: 100px; }
+      .section-head { gap: 14px; margin-bottom: 34px; }
+      section { padding: 75px 0; }
+      .hero-card { padding: 26px; }
+      .container { width: min(var(--max), calc(100% - 28px)); }
+    }
+
+    @media print {
+      nav, .actions { display: none; }
+      header { min-height: auto; padding: 50px 0; }
+      section { padding: 45px 0; break-inside: avoid; }
+      .card { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <header id="inicio">
+    <nav>
+      <div class="container nav-inner">
+        <a class="brand" href="#inicio">Uíza Carvalho</a>
+        <div class="nav-links">
+          <a href="#sobre">Sobre</a>
+          <a href="#experiencia">Experiência</a>
+          <a href="#competencias">Competências</a>
+          <a href="#formacao">Formação</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container hero">
+      <div>
+        <div class="eyebrow">Analista de Testes · QA</div>
+        <h1>Uíza de Carvalho Silva</h1>
+        <h2>Qualidade de Software, testes manuais e automatizados.</h2>
+        <p>
+          Analista de Testes (QA) formada em Sistemas de Informação, com especialização
+          em Analytics e Business Intelligence e em QA e Testes de Software.
+          Atualmente atuando como Tester na Docato, com experiência em qualidade de
+          software, testes funcionais, não funcionais, regressivos e de API.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#experiencia">Ver experiência</a>
+          <a class="button" href="mailto:uizacarvalhosilva@gmail.com">Entrar em contato</a>
+          <a class="button" href="https://www.linkedin.com/in/uizacarvalho" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="number">QA</div>
+        <p><strong>Tester</strong> com atuação em análise de requisitos, execução de testes, documentação de evidências, reporte de bugs e colaboração com times de desenvolvimento e produto.</p>
+        <div class="tags" style="margin-top:22px">
+          <span class="tag">Cypress</span>
+          <span class="tag">Playwright</span>
+          <span class="tag">Postman</span>
+          <span class="tag">BDD / Gherkin</span>
+          <span class="tag">C#</span>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Perfil</div>
+          <div>
+            <h2 class="section-title">Qualidade começa antes do teste.</h2>
+            <p class="summary">
+              Experiência em ambientes ágeis (Scrum), com foco na garantia da qualidade
+              e melhoria contínua dos produtos. Vivência com BDD e Gherkin e ferramentas
+              como Postman, Cypress e Playwright.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <article class="card">
+            <h3>Atuação</h3>
+            <ul>
+              <li>Validação de produtos, fluxos e funcionalidades.</li>
+              <li>Análise de requisitos, histórias de usuário e critérios de aceitação.</li>
+              <li>Planejamento e execução de testes manuais e automatizados.</li>
+              <li>Análise de regras de negócio e documentação de evidências.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Metodologias</h3>
+            <ul>
+              <li>Scrum e Kanban.</li>
+              <li>BDD e Gherkin.</li>
+              <li>SDLC — ciclo de vida do desenvolvimento de software.</li>
+              <li>Foco em qualidade, colaboração e melhoria contínua.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Carreira</div>
+          <div>
+            <h2 class="section-title">Experiência profissional</h2>
+            <p class="summary">Trajetória em QA, suporte técnico e tecnologia, combinando visão de produto, troubleshooting e qualidade.</p>
+          </div>
+        </div>
+
+        <div class="experience">
+          <article class="job">
+            <h3>Docato</h3>
+            <div class="meta"><span class="role">Tester</span> · fevereiro de 2026 – presente · Ponta Grossa, PR</div>
+            <ul>
+              <li>Validação de produtos, fluxos e funcionalidades, verificando requisitos e padrões de qualidade.</li>
+              <li>Análise de requisitos, histórias de usuário e critérios de aceitação.</li>
+              <li>Planejamento e execução de testes manuais e automatizados, documentação de evidências e reporte de bugs.</li>
+              <li>Análise de regras de negócio para garantir que o software reflita a necessidade real do usuário.</li>
+              <li>Atuação em metodologias ágeis, participando de rituais de Scrum e Kanban e colaborando com desenvolvedores e POs.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>HostGator América Latina</h3>
+            <div class="meta"><span class="role">Analista de Testes Jr. (QA)</span> · fevereiro de 2025 – outubro de 2025 · Florianópolis, SC</div>
+            <ul>
+              <li>Mapeamento de cenários de testes e escrita de BDDs nas tarefas do Jira.</li>
+              <li>Execução de testes manuais, API, funcionais, exploratórios e regressivos.</li>
+              <li>Liberação/bloqueio de releases e acompanhamento de deploys.</li>
+              <li>Automação de testes E2E utilizando Cypress.</li>
+              <li>Identificação e reporte de bugs, defects e melhorias via Jira.</li>
+              <li>Criação e atualização de documentos de Garantia da Qualidade.</li>
+              <li>Colaboração com desenvolvimento, produto e UX/UI.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>HostGator América Latina</h3>
+            <div class="meta"><span class="role">Analista de Desenvolvimento Starter | QA</span> · fevereiro de 2024 – fevereiro de 2025 · Florianópolis, SC</div>
+          </article>
+
+          <article class="job">
+            <h3>HostGator América Latina</h3>
+            <div class="meta"><span class="role">Test Drive Analista de Desenvolvimento Starter | QA</span> · novembro de 2023 – fevereiro de 2024 · Florianópolis, SC</div>
+          </article>
+
+          <article class="job">
+            <h3>HostGator América Latina</h3>
+            <div class="meta"><span class="role">Assistente de Suporte (N1)</span> · novembro de 2021 – novembro de 2023</div>
+            <ul>
+              <li>Atendimento ao cliente via Chat e abertura de chamados no Zendesk.</li>
+              <li>Configuração de domínios, DNS, apontamentos, redirecionamentos e SSL/TLS.</li>
+              <li>Troubleshooting de MySQL/PHPMyAdmin, WordPress, websites e e-mails.</li>
+              <li>Configuração de MX, SPF, DKIM, DMARC, SSH, FTP e acessos MySQL.</li>
+              <li>Atuação com ModSecurity, Greylisting, cPHULK, Linux CentOS, Cloudflare, WHM e cPanel.</li>
+              <li>Suporte especializado a servidores VPS e dedicados, análise de logs e malware.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>Vale das Flores Empreendimentos e Adm Ltda</h3>
+            <div class="meta"><span class="role">Auxiliar Administrativo</span> · dezembro de 2018 – outubro de 2021 · Teófilo Otoni e região</div>
+            <ul>
+              <li>Controle de usuários, suporte e treinamento no sistema interno.</li>
+              <li>Desenvolvimento de manuais e POPs de sistemas e processos internos.</li>
+              <li>Controle financeiro, remessas bancárias e suporte a infraestrutura local.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>Vale das Flores Empreendimentos e Adm Ltda</h3>
+            <div class="meta"><span class="role">Estagiário de TI</span> · dezembro de 2016 – dezembro de 2018 · Teófilo Otoni, MG</div>
+            <ul>
+              <li>Configuração e manutenção de Thin Clients.</li>
+              <li>Formatação, instalação e configuração de sistemas internos.</li>
+              <li>Configuração de rede, controlador de domínio e virtualização.</li>
+              <li>Suporte remoto a unidades externas.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="competencias">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Stack</div>
+          <div>
+            <h2 class="section-title">Competências & certificações</h2>
+            <p class="summary">Tecnologias, práticas e conhecimentos que fazem parte da atuação profissional.</p>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <article class="card">
+            <h3>Principais competências</h3>
+            <div class="tags">
+              <span class="tag">C#</span>
+              <span class="tag">Solução de problemas de software</span>
+              <span class="tag">SDLC</span>
+              <span class="tag">Testes funcionais</span>
+              <span class="tag">Testes regressivos</span>
+              <span class="tag">Testes de API</span>
+              <span class="tag">Testes E2E</span>
+              <span class="tag">Cypress</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">Postman</span>
+              <span class="tag">BDD</span>
+              <span class="tag">Gherkin</span>
+              <span class="tag">Jira</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Certificações e cursos</h3>
+            <ul>
+              <li>Automação de Testes com Capybara, Cucumber e Ruby</li>
+              <li>Aprenda Postman em 1 Hora — Iniciante</li>
+              <li>Javascript para QAs</li>
+              <li>Descobrindo o cPanel</li>
+              <li>Comunicação Inclusiva com Atenção Plena, Empatia e Compaixão</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="formacao">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Educação</div>
+          <div>
+            <h2 class="section-title">Formação acadêmica</h2>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="education-item">
+            <h3>Faculdade VINCIT</h3>
+            <div class="meta">Pós-graduação Lato Sensu — Especialização em QA e Testes de Software · maio de 2024 – maio de 2025</div>
+          </div>
+          <div class="education-item">
+            <h3>Pontifícia Universidade Católica de Minas Gerais</h3>
+            <div class="meta">Especialização em Analytics e Business Intelligence · 2020 – 2021</div>
+          </div>
+          <div class="education-item">
+            <h3>Faculdades Doctum</h3>
+            <div class="meta">Sistemas de Informação · 2016 – 2019</div>
+          </div>
+          <div class="education-item">
+            <h3>Centro de Educação Profissional Paulo Viana-CEP</h3>
+            <div class="meta">Técnico em Informática · 2013 – 2014</div>
+          </div>
+          <div class="education-item">
+            <h3>SENAI Teófilo Otoni UI Edson Gonçalves Soares</h3>
+            <div class="meta">Técnico em Administração · 2012 – 2013</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Contato</div>
+          <div>
+            <h2 class="section-title">Vamos conversar?</h2>
+            <p class="summary">São Paulo, Brasil · Analista de Testes | QA</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <a class="contact-link" href="mailto:uizacarvalhosilva@gmail.com">
+            <small>E-mail</small>
+            uizacarvalhosilva@gmail.com
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/uizacarvalho" target="_blank" rel="noopener">
+            <small>LinkedIn</small>
+            linkedin.com/in/uizacarvalho
+          </a>
+          <a class="contact-link" href="tel:+5533988380266">
+            <small>Telefone</small>
+            +55 (33) 98838-0266
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Uíza de Carvalho Silva · Currículo online
+    </div>
+  </footer>
+</body>
+</html>
