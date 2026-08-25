@@ -22,8 +22,9 @@ nav { position: sticky; top: 24px; z-index: 10; height: 0; }
 .links a { text-decoration: none; }
 .links a:hover { color: var(--accent); }
 .language-switcher, .theme-switcher { display: flex; align-items: center; min-height: 36px; border-radius: 999px; background: #f2f2f2; }
-.language { width: 48px; height: 32px; display: grid; place-items: center; border-radius: 999px; font-size: 17px; }
+.language { width: 48px; height: 32px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 999px; background: transparent; font-size: 17px; cursor: pointer; }
 .language.active { width: 52px; height: 36px; border: 2px solid #f2f2f2; background: #fff; }
+.language:disabled { cursor: not-allowed; opacity: .35; }
 .theme-switcher { gap: 2px; padding: 2px; }
 .theme-option { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; font-size: 14px; }
 .theme-option.active { border: 1px solid #ededed; background: #fff; }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,16 +9,16 @@
 
 </head>
 <body>
-<nav><div class="wrap nav"><div class="language-switcher" aria-label="Idiomas disponíveis"><span class="language active" aria-label="Inglês">🇬🇧</span><span class="language" aria-label="Português">🇧🇷</span><span class="language" aria-label="Japonês">🇯🇵</span></div><div class="links"><a href="#inicio">About</a><a href="#experiencia">Experience</a><a href="#formacao">Education</a><a href="#projetos">Projects</a></div><div class="theme-switcher" aria-label="Tema claro selecionado"><span class="theme-option active" aria-hidden="true">☀️</span><span class="theme-option" aria-hidden="true">🌑</span></div></div></nav>
+<nav><div class="wrap nav"><div class="language-switcher" aria-label="Selecionar idioma"><button class="language active" type="button" data-language="en" aria-label="Switch to English" aria-pressed="true">🇬🇧</button><button class="language" type="button" data-language="pt" aria-label="Mudar para português" aria-pressed="false">🇧🇷</button><button class="language" type="button" aria-label="Japonês indisponível" disabled>🇯🇵</button></div><div class="links"><a href="#inicio" data-nav="about">About</a><a href="#experiencia" data-nav="experience">Experience</a><a href="#formacao" data-nav="education">Education</a><a href="#projetos" data-nav="projects">Projects</a></div><div class="theme-switcher" aria-label="Tema claro selecionado"><span class="theme-option active" aria-hidden="true">☀️</span><span class="theme-option" aria-hidden="true">🌑</span></div></div></nav>
 
 <header class="wrap hero" id="inicio">
 <div class="hero-copy">
-<p class="hello">Hi! <span aria-hidden="true">👋</span></p>
-<div class="hero-content"><h1>I’m <strong>Uíza de Carvalho</strong>,</h1><p class="role">QA Engineer focused on shipping reliable, 🪲-free experiences across all platforms.</p></div>
-<div class="actions"><a class="btn dark cv-button" href="assets/pdf/curriculo.pdf" download>Download CV <span aria-hidden="true">⇩</span></a><a class="btn icon-btn" href="mailto:uizacarvalhosilva@gmail.com" aria-label="Enviar e-mail"><span aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Gmail"></span></a><a class="btn icon-btn" href="https://github.com/uizacarvalhosilva" target="_blank" rel="noopener" aria-label="Abrir GitHub"><span aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></span></a><a class="btn icon-btn" href="https://www.linkedin.com/in/uizacarvalho" target="_blank" rel="noopener" aria-label="Abrir LinkedIn"><span aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></span></a></div>
+<p class="hello" data-hero="hello">Hi! <span aria-hidden="true">👋</span></p>
+<div class="hero-content"><h1 data-hero="title">I’m <strong>Uíza de Carvalho</strong>,</h1><p class="role" data-hero="role">QA Engineer focused on shipping reliable, 🪲-free experiences across all platforms.</p></div>
+<div class="actions"><a class="btn dark cv-button" href="assets/pdf/curriculo.pdf" download data-hero="cv">Download CV <span aria-hidden="true">⇩</span></a><a class="btn icon-btn" href="mailto:uizacarvalhosilva@gmail.com" aria-label="Enviar e-mail"><span aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Gmail"></span></a><a class="btn icon-btn" href="https://github.com/uizacarvalhosilva" target="_blank" rel="noopener" aria-label="Abrir GitHub"><span aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></span></a><a class="btn icon-btn" href="https://www.linkedin.com/in/uizacarvalho" target="_blank" rel="noopener" aria-label="Abrir LinkedIn"><span aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></span></a></div>
 </div>
 <div class="hero-visual"><div class="photo"><img src="assets/images/profile.jpg" alt="Foto de perfil de Uíza de Carvalho Silva"></div></div>
-<div class="hero-highlights" aria-label="Professional highlights"><div class="highlight"><span class="highlight-icon" aria-hidden="true">🤖</span><p><strong>Automation</strong> from the ground up</p></div><div class="highlight"><span class="highlight-icon" aria-hidden="true">🧪</span><p><strong>End-to-end</strong> test coverage</p></div><div class="highlight"><span class="highlight-icon" aria-hidden="true">🔎</span><p>Faster, <strong>safer</strong> releases</p></div></div>
+<div class="hero-highlights" aria-label="Professional highlights"><div class="highlight"><span class="highlight-icon" aria-hidden="true">🤖</span><p data-highlight="automation"><strong>Automation</strong> from the ground up</p></div><div class="highlight"><span class="highlight-icon" aria-hidden="true">🧪</span><p data-highlight="e2e"><strong>End-to-end</strong> test coverage</p></div><div class="highlight"><span class="highlight-icon" aria-hidden="true">🔎</span><p data-highlight="releases">Faster, <strong>safer</strong> releases</p></div></div>
 </header>
 
 <main>
@@ -67,6 +67,44 @@ document.addEventListener('click', async function (event) {
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  const copy = {
+    en: {
+      nav: { about: 'About', experience: 'Experience', education: 'Education', projects: 'Projects' },
+      hello: 'Hi! <span aria-hidden="true">👋</span>',
+      title: 'I’m <strong>Uíza de Carvalho</strong>,',
+      role: 'QA Engineer focused on shipping reliable, 🪲-free experiences across all platforms.',
+      cv: 'Download CV <span aria-hidden="true">⇩</span>',
+      highlights: { automation: '<strong>Automation</strong> from the ground up', e2e: '<strong>End-to-end</strong> test coverage', releases: 'Faster, <strong>safer</strong> releases' }
+    },
+    pt: {
+      nav: { about: 'Sobre', experience: 'Experiência', education: 'Formação', projects: 'Projetos' },
+      hello: 'Oi! <span aria-hidden="true">👋</span>',
+      title: 'Eu sou <strong>Uíza de Carvalho</strong>,',
+      role: 'Analista de QA focada em entregar experiências confiáveis e livres de bugs em todas as plataformas.',
+      cv: 'Baixar currículo <span aria-hidden="true">⇩</span>',
+      highlights: { automation: '<strong>Automação</strong> desde o início', e2e: '<strong>Testes end-to-end</strong> com cobertura', releases: 'Entregas mais <strong>rápidas e seguras</strong>' }
+    }
+  };
+
+  document.querySelectorAll('.language[data-language]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const language = button.dataset.language;
+      const content = copy[language];
+      document.querySelectorAll('[data-nav]').forEach(function (link) { link.textContent = content.nav[link.dataset.nav]; });
+      document.querySelector('[data-hero="hello"]').innerHTML = content.hello;
+      document.querySelector('[data-hero="title"]').innerHTML = content.title;
+      document.querySelector('[data-hero="role"]').textContent = content.role;
+      document.querySelector('[data-hero="cv"]').innerHTML = content.cv;
+      document.querySelectorAll('[data-highlight]').forEach(function (highlight) { highlight.innerHTML = content.highlights[highlight.dataset.highlight]; });
+      document.documentElement.lang = language === 'pt' ? 'pt-BR' : 'en';
+      document.querySelectorAll('.language[data-language]').forEach(function (item) {
+        const selected = item === button;
+        item.classList.toggle('active', selected);
+        item.setAttribute('aria-pressed', String(selected));
+      });
+    });
+  });
+
   const companies = {
     'Docato': { logo: 'assets/images/docato.svg', location: 'Ponta Grossa, PR' },
     'HostGator América Latina': { logo: 'assets/images/hostgator.svg', location: 'Florianópolis, SC' },
