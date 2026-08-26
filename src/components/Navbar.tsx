@@ -1,6 +1,6 @@
 import { useLanguage } from '../LanguageContext'
 
-export function Navbar() {
+export function Navbar({ dark, onThemeChange }: { dark: boolean; onThemeChange: (dark: boolean) => void }) {
   const { language, setLanguage } = useLanguage()
   return (
     <nav aria-label="Navegação principal">
@@ -17,9 +17,9 @@ export function Navbar() {
           <a href="#projetos">Projects</a>
           <a href="#contato">Contact</a>
         </div>
-        <div className="theme-switcher" aria-label="Tema claro selecionado">
-          <span className="theme-option active" aria-hidden="true">☀️</span>
-          <span className="theme-option" aria-hidden="true">🌑</span>
+        <div className="theme-switcher" aria-label={dark ? 'Tema escuro selecionado' : 'Tema claro selecionado'}>
+          <button className={`theme-option ${dark ? '' : 'active'}`} type="button" aria-label="Ativar modo claro" aria-pressed={!dark} onClick={() => onThemeChange(false)}>☀️</button>
+          <button className={`theme-option ${dark ? 'active' : ''}`} type="button" aria-label="Ativar modo escuro" aria-pressed={dark} onClick={() => onThemeChange(true)}>🌑</button>
         </div>
       </div>
     </nav>

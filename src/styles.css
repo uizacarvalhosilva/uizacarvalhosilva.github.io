@@ -229,7 +229,7 @@ nav { position: sticky; top: 24px; z-index: 10; height: 0; padding: 0; pointer-e
 .language { width: 48px; height: 32px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 999px; background: transparent; font-size: 17px; cursor: pointer; }
 .language.active { width: 52px; height: 36px; border: 2px solid #f2f2f2; background: #fff; }
 .theme-switcher { gap: 2px; padding: 2px; margin-left: 0; }
-.theme-option { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; font-size: 14px; }
+.theme-option { width: 32px; height: 32px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; background: transparent; font-size: 14px; cursor: pointer; }
 .theme-option.active { border: 1px solid #ededed; background: #fff; }
 
 @media (max-width: 700px) {
