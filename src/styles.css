@@ -35,6 +35,10 @@
   --shadow: 0 16px 42px rgba(0, 0, 0, .22);
 }
 
+:root[data-theme='dark'] .links,
+:root[data-theme='dark'] .links a,
+:root[data-theme='dark'] .links a:hover { color: #000000; }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 104px; }
 body { margin: 0; min-width: 320px; background: var(--background); }
